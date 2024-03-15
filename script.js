@@ -50,7 +50,7 @@ function editTask(taskElement){
 }
 
 function addTask(){
-    const taskDate = new Date(document.getElementById('task-date').value);
+    const taskDate = new Date(document.getElementById('task-date').value.replace('-','/'));
     const taskDesc = document.getElementById('task-desc').value.trim();
 
     if(taskDesc && !isNaN(taskDate.getDate())){
